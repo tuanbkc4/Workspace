@@ -1,0 +1,24 @@
+a, Thêm một cột uid vào bảng table friends:
+	ALTER TABLE friends ADD uid int(6) NOT NULL;
+
+	UPDATE friends SET uid = 2 WHERE fid = 1;
+	UPDATE friends SET uid = 1 WHERE fid = 2;
+	UPDATE friends SET uid = 3 WHERE fid = 3;
+	UPDATE friends SET uid = 4 WHERE fid = 4;
+	UPDATE friends SET uid = 2 WHERE fid = 5
+b, Thực hiện các câu truy vấn sau:
+- Liệt kê danh sách bạn bè gồm các thông tin: fid, fname, uid có fid nằm trong khoảng 2 đến 4
+	SELECT friends.fid,friends.fname,friends.uid FROM friends WHERE friends.fid BETWEEN 2 AND 4;
+- Liệt kê danh sách bạn bè gồm các thông tin: fid, fname, fl_id,flname,uid,username có fid >=3
+	SELECT friends.fid,friends.fname,friends.fl_id,friend_list.flname,friends.uid,users.username FROM users
+	LEFT JOIN friends ON users.id = friends.uid 
+	LEFT JOIN friend_list ON friends.fl_id = friend_list.fl_id
+	WHERE friends.fid >=3;
+- Tại table friends, xoá những fname chứa từ "thị"
+	DELETE FROM friends WHERE friends.fname like "%thị%";
+- Tại bảng users, cập nhật password = v123456 thành vne654
+	UPDATE users 
+	SET users.password = 'vne654'
+	WHERE users.password = 'v123456';	
+
+	
