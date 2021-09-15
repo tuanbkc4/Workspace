@@ -12,3 +12,4 @@ foreach ($a as $items) {
 }
 $string = implode(',', $newArr);
 echo $string;
+echo 'BDTUAN';
