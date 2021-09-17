@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -13,10 +16,14 @@
 		<div class="w3agile-border">
 			<h2>TRANG QUẢN TRỊ VIÊN</h2>
 			<div class="login-main login-agileits"> 
-				<p>Chúc mừng [email] đã đăng nhập thành công</p>
-				<p>Avatar của bạn: <img src="avatar/avatar.png" width="100px" /></p>
+				<p>Chúc mừng <?php echo $_SESSION['email']; ?> đã đăng nhập thành công</p>
+				<p>Avatar của bạn: </p>
+				<img src="<?php echo 'avatar/'.$_SESSION['nameAvt'];?>" width="50px" height="50px"  />
 			</div>
 		</div> 
 	</div>
+	<?php
+		
+	?>
 </body>
 </html>

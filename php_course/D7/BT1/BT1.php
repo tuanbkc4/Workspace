@@ -56,6 +56,7 @@
         foreach ($ArrFindIndex as $index) {
             $newArr[] = $Arr[$index]; 
         } 
+        
     ?>
     <table border="1px" style="border-collapse:collapse">
         <tr>

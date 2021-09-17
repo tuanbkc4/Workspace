@@ -1,3 +1,8 @@
+<?php
+	ob_start();
+    session_start();
+	// session_destroy();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -26,22 +31,28 @@
 					if(isset($_POST["submit"])){
 						$mail = trim($_POST["mail"]);
 						$pass = trim($_POST["Password"]);
-						// $avt = $_FILE["avatar"];
-						if(empty($mail) && empty($pass) /*&& isset($avt)*/){
+						$avt = $_FILE["avatar"]["name"];
+						if(empty($mail) && empty($pass) && empty($avt)){
 							echo '<p style="color:#fff;">Vui lòng điền đầy đủ thông tin</p><br/>';
 						}
-						if($mail="info@vinaenter.edu.vn" && $pass="123456") {
-							$name = $_FILES["file"]["name"];
-							$tmp_name = $_FILES["file"]["tmp_name"];
+						if($mail=="info@vinaenter.edu.vn" && $pass=="123456") {
+							//upload file
+							$name = $_FILES["avatar"]["name"];
+							$tmp_name = $_FILES["avatar"]["tmp_name"];
 							$tmp = explode('.',$name);
 							$extension_file = end($tmp);
 							$newName = "avt-".time().rand(1,100).'.'.$extension_file;
-							$path_upload = "./" . $newName;
+							$path_upload = "avatar/" . $newName;
 							move_uploaded_file($tmp_name, $path_upload);
+							$_SESSION['email']=$mail;
+							$_SESSION['nameAvt']=$newName;
+							
 						}else{
-							echo 'Tài khoản hoặc mật khẩu sai, vui lòng nhập lại!!'
-						}				
-                        
+							$notification ="<p style='color:red;font-style:italic;text-align:center;'>Tài khoản hoặc mật khẩu sai, vui lòng nhập lại!!</p>";
+						}	
+						$_SESSION['email']=$mail;
+						$_SESSION['nameAvt']=$newName;			
+						header("location:success.php");
                     
 					}
 				?>
@@ -51,11 +62,13 @@
 					<p>Password (*)</p>
 					<input type="password" placeholder="Password" name="Password" >
 					<p>Avatar</p>
-					<input type="file" name="avatar[]" multiple >
+					<input type="file" name="avatar"  >
 					<input type="submit" value="Login" name="submit">
 				</form>
 				<?php
-					
+					if(isset($notification)){
+						echo $notification;
+					}
 				?>
 			</div>
 		</div> 
@@ -65,3 +78,6 @@
 	<script type="text/javascript" src="./js/code.js"></script>
 </body>
 </html>
+<?php
+	ob_end_flush();
+?>
