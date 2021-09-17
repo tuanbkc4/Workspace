@@ -56,12 +56,13 @@ body {
 form .heading {
     color: #ccc;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 input {
     display: block;
     outline: none;
-    padding: 8px 12px;
+    padding: 8px 12px 8px 30px;
     font-size: 16px;
     border: .1px solid rgba(187, 187, 187, 0.493);
     border-radius: 5px;
@@ -69,6 +70,10 @@ input {
     margin-bottom: 16px;
     color: #ccc;
     font-family: arial;
+}
+
+.form-input {
+    position: relative;
 }
 
 input:not(input[type="checkbox"]) {
@@ -79,39 +84,40 @@ input:focus {
     border: .1px solid rgba(10, 157, 255, 0.493);
 }
 
-.checkbox {
-    display: inline-block;
-    margin-right: 4px;
+.icon {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
 }
 
-label {
-    color: #ccc;
-    font-size: 17px;
+input:focus~.icon {
+    color: rgba(10, 157, 255, 0.493);
 }
 
-.register {
+.login {
     font-size: 16px;
     background-color: rgb(0, 36, 112);
     cursor: pointer;
-    color: rgb(63, 121, 196);
-    border: none;
+    color: #ccc;
+    /* border: none; */
     width: 100%;
 }
 
-.register:hover {
+.login:hover {
     background-color: rgb(12, 30, 68);
 }
 
-form p {
-    color: #ccc;
-}
-
-form p a {
+form a {
     text-decoration: none;
-    color: rgb(11, 91, 165);
+    color: #ccc;
+    display: block;
+    text-align: right;
+    margin-bottom: 16px;
 }
 
-form p a:hover {
+form a:hover {
     text-decoration: underline;
     color: rgb(10, 79, 145);
 }
@@ -125,13 +131,20 @@ form p a:hover {
     }
     #container {
         padding: 50px 25px;
-        width: 500px
+        width: 500px;
+        min-height: 474px;
     }
     .main {
         padding: 0;
     }
     label {
         font-size: 15px;
+    }
+    form {
+        margin-top: 50px;
+    }
+    input {
+        margin-bottom: 32px;
     }
 }
 
