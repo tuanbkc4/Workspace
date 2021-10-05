@@ -1,0 +1,295 @@
+html {
+    /* center-block */
+    display: block;
+    margin: 0 auto;
+    /* center-inline */
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /* flex-center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-centerc */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* flex-image */
+    width: 0;
+    height: 0;
+    flex-shrink: 0;
+    object-fit: cover;
+    /* flex-col */
+    display: flex;
+    flex-direction: column;
+    /* fabase */
+    display: flex;
+    align-items: baseline;
+    /* faend */
+    display: flex;
+    align-items: flex-end;
+    /* fastart */
+    display: flex;
+    align-items: flex-start;
+    /* facenter */
+    display: flex;
+    align-items: center;
+    /* fjend */
+    display: flex;
+    justify-content: flex-end;
+    /* grid-center */
+    display: grid;
+    place-items: center;
+    /* abs-center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* abs-centerx */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* abs-centery */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* abs-full	*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* fixed-full*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* abs-top-left*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* abs-top-right*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* abs-bottom-left	*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* abs-bottom-right	*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* abs-full-width*/
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* abs-full-height*/
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* abs-dropdown	*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* text-truncate*/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    /* text-single*/
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* text-style*/
+    font-size: ;
+    color: ;
+    font-weight: normal;
+    line-height: inherit;
+    /* text-gradient*/
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient( to right, #, #);
+    /* flex-layout	*/
+    /* .your-class {
+        --f-columns: 4;
+        --f-gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: calc(-1 * var(--f-gap));
+        margin-bottom: calc(-1 * var(--f-gap));
+    }
+    .your-class>* {
+        margin-left: var(--f-gap);
+        margin-left: var(--f-gap);
+        width: calc((100% / var(--f-columns) - var(--f-gap)));
+    } */
+    /* grid-layout*/
+    display: grid;
+    grid-template-columns: repeat(, 1fr);
+    grid-gap: ;
+    /* ohidden*/
+    overflow: hidden;
+    /* xhidden	*/
+    overflow-x: hidden;
+    /* yhidden*/
+    overflow-y: hidden;
+    /* xauto*/
+    overflow-x: auto;
+    /* yauto*/
+    overflow-y: auto;
+    /* uppercase*/
+    text-transform: uppercase;
+    /* lowercase*/
+    text-transform: lowercase;
+    /* capitalize*/
+    text-transform: capitalize;
+    /* bold	*/
+    font-weight: bold;
+    /* italic*/
+    font-style: italic;
+    /* @1279*/
+    @media screen and (max-width: 1279px) {}
+    /* @1023*/
+    @media screen and (max-width: 1023px) {}
+    /* @767	*/
+    @media screen and (max-width: 767px) {}
+    /* @768	*/
+    @media screen and (min-width: 768px) {}
+    /* @1024*/
+    @media screen and (min-width: 1024px) {}
+    /* @1280*/
+    @media screen and (min-width: 1280px) {}
+    /* random-image*/
+    /* css-reset*/
+    html {
+        box-sizing: border-box;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    input,
+    textarea,
+    select,
+    button {
+        outline: none;
+    }
+    input {
+        line-height: normal;
+    }
+    label,
+    button {
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+    }
+    /* scroll-hide*/
+    .yourclass {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .yourclass::-webkit-scrollbar {
+        display: none;
+    }
+    /* input-spin-hide	*/
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    /* input-placeholder*/
+     ::-webkit-input-placeholder {
+        color: ;
+    }
+     ::-moz-input-placeholder {
+        color: ;
+    }
+    /* img-responsive*/
+    .yourclass {
+        height: 0;
+        position: relative;
+        padding-bottom: 56.25%;
+    }
+    .yourclass>* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* img-cover*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* grid-scroll-snap*/
+    .yourclass {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 90%;
+        grid-auto-flow: column;
+        grid-gap: 1.5rem;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+    }
+    .yourclass::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+    .yourclass>* {
+        scroll-snap-align: start;
+    }
+    /* @max-w*/
+    /* @min-w*/
+    /* input-style*/
+    /* button-style*/
+    /* modal-style*/
+    /* css-hide*/
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    /* css-show*/
+    opacity: 1;
+    visibility: visible;
+    /* linear-gradient*/
+    /* @supports*/
+    /* @keyframes*/
+    /* scrollbar-style*/
+    /* square*/
+    /* rect*/
+    /* circle*/
+    /* wfull*/
+    width: 100%;
+    /* hfull*/
+    height: 100%;
+    /* sfull*/
+    height: 100%;
+    width: 100%;
+}
